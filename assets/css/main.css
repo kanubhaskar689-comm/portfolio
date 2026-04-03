@@ -1273,3 +1273,32 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* ===== FIX: Prevent sidebar overlap ===== */
+
+/* Desktop view */
+@media (min-width: 1200px) {
+  .main {
+    margin-left: 300px; /* same as sidebar width */
+  }
+
+  #footer {
+    margin-left: 300px;
+  }
+}
+
+/* Mobile / Tablet view */
+@media (max-width: 1199px) {
+  .main {
+    margin-left: 0;
+  }
+
+  #footer {
+    margin-left: 0;
+  }
+}
+
+/* Optional: smooth transition */
+.main {
+  transition: margin-left 0.3s ease;
+}
